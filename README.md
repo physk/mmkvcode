@@ -47,7 +47,7 @@ chmod +x scripts/get-web.sh
 ```
 sudo su
 cd ~/mmkvcode
-./updatemmkvcode.sh 
+./updatemmkvcode.sh -p 
 ```
 
 ## Crontab Usage
