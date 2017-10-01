@@ -12,7 +12,7 @@ preg_match("'<div class=\"codecontent\">(.*?)</div>'si", $html, $matches);
 //If app code exists write to tmpcode
 if(is_array($matches))
 {
-	$fp = fopen("tmpcode", "w");
+	$fp = fopen("/tmp/tmpcode", "w");
 	fwrite($fp, $matches[1]);
 	fclose($fp);
 }
