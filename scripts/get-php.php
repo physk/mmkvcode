@@ -1,5 +1,12 @@
 <?php
 
+//Dealing with PHP 8.1 array warning
+if (isset($_SESSION['is_condition'])) {
+//Do something
+} else {
+$_SESSION['is_condition'] = NULL;
+} 
+
 //Enter Forum Post URL here
 $forumurl = "https://www.makemkv.com/forum2/viewtopic.php?f=5&t=1053";
 
