@@ -3,7 +3,7 @@
 ## Overview
 This script works hand in hand with [ARM](https://github.com/ahnooie/automatic-ripping-machine)
 
-It will grab the lastest beta key from the MakeMKV forums and update the MakeMKV Settings file for you if there is no MakeMKV Settings file presant it will create one for you :+1:
+It will grab the lastest beta key from the MakeMKV forums and update the MakeMKV Settings file for you if there is no MakeMKV Settings file present it will create one for you :+1:
 
 * You can run a basic install using ```./updatemmkvcode.sh -w```. This will grab the code from my webserver
 * You can run a more advanced install using ```./updatemmkvcode -p```. This requires you install and extra package (See Advanced Install) But it will grap the App Key from your local machine rather than my server
@@ -15,8 +15,7 @@ It will grab the lastest beta key from the MakeMKV forums and update the MakeMKV
 ## Easy use
 ### Basic Install:
 ```
-sudo su
-apt-get install git wget -y
+sudo apt install git wget -y
 git clone https://github.com/physk/mmkvcode.git
 cd mmkvcode
 chmod +x updatemmkvcode.sh
@@ -25,7 +24,6 @@ chmod +x scripts/get-web.sh
 
 ### Basic Usage (When you want to update the app_key):
 ```
-sudo su
 cd ~/mmkvcode
 ./updatemmkvcode.sh -w
 ```
@@ -34,8 +32,7 @@ cd ~/mmkvcode
 
 ### Advanced Install
 ```
-sudo su
-apt-get install git wget php-cli -y
+sudo apt install git wget php-cli -y
 git clone https://github.com/physk/mmkvcode.git
 cd mmkvcode
 chmod +x updatemmkvcode.sh
@@ -45,15 +42,13 @@ chmod +x scripts/get-web.sh
 
 ### Advanced Usage (When you want to update the app_key)
 ```
-sudo su
 cd ~/mmkvcode
 ./updatemmkvcode.sh -p 
 ```
 
 ## Crontab Usage
 ```
-sudo su
-crontab -e
+sudo crontab -e
 ```
 
 (If using remote grab)
