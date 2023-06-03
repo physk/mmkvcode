@@ -27,13 +27,13 @@ fi
 
 if [ -f "/tmp/tmpcode" ]; then
 	echo "Found /tmp/tmpcode"
-	if [ -f "/root/.MakeMKV/settings.conf" ]; then
-		echo "/root/.MakeMKV/settings.conf found - Updating app_key"
-		sed -ri 's|app_key = (.*)|app_key = "'`cat /tmp/tmpcode`'"|g' /root/.MakeMKV/settings.conf
+	if [ -f "/$HOME/.MakeMKV/settings.conf" ]; then
+		echo "/$HOME/.MakeMKV/settings.conf found - Updating app_key"
+		sed -ri 's|app_key = (.*)|app_key = "'`cat /tmp/tmpcode`'"|g' /$HOME/.MakeMKV/settings.conf
 	else
-		echo "/root/.MakeMKV/settings.conf not found - Creating"
-		mkdir -p /root/.MakeMKV/
-		echo "app_key = \"`cat /tmp/tmpcode`\"" > /root/.MakeMKV/settings.conf
+		echo "/$HOME/.MakeMKV/settings.conf not found - Creating"
+		mkdir -p /$HOME/.MakeMKV/
+		echo "app_key = \"`cat /tmp/tmpcode`\"" > /$HOME/.MakeMKV/settings.conf
 	fi		
 fi
 
